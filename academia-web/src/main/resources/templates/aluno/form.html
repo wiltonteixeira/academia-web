@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="UTF-8">
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"crossorigin="anonymous"></script>
+		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"crossorigin="anonymous"></script>
+		 <link href="https://fonts.googleapis.com/css?family=Dancing+Script"rel="stylesheet">
+		 <link rel="stylesheet" type="text/css" href="css/principal.css">
+		 <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+		
+      <title>aluno-cadastro</title>
+	</head>
+	
+	<body style="background-color: #CDDEE9;"></body>
+	<body>
+			<div class="p-3 mb-2 bg-secondary text-white">
+			  <i><font size="5" face="Chaucer"><center>Cadastro de Aluno</center></font></i>
+			</div>
+			<div class="container">
+				<form action="#" th:action="@{/aluno/save}" th:object="${aluno}"
+					method="POST">
+		
+					<div class="form-row  ">
+						<div class="form-group col-md-6">
+							<label for="inputname" class="col-form-label"><b>Nome
+									completo</b></label> <input type="text" class="form-control" id="inputname"
+								placeholder="digite  seu nome">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="inputnumerol4" class="col-form-label"><b>Matricula</b></label>
+							<input type="numero" class="form-control" id="inputnumerol4"
+								placeholder="Digite matricula">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputnumerol4" class="col-form-label"><b>Telefone
+							</b></label> <input type="numero" class="form-control" id="inputnumerol4"
+								placeholder="Digite seu numero">
+						</div>
+					</div>
+		
+					<div class="form-row  ">
+						<div class="form-group col-md-8">
+							<label for="inputAddress2" class="col-form-label"><b>Endereço</b></label>
+							<input type="text" class="form-control" id="inputAddress2"
+								placeholder="digite seu endereço">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="inputAddress2" class="col-form-label"><b>Numero</b></label>
+							<input type="text" class="form-control" id="inputAddress2"
+								placeholder="">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="inputAddress2" class="col-form-label"><b>Cep</b></label>
+							<input type="text" class="form-control" id="inputAddress2"
+								placeholder="digite cep">
+						</div>
+					</diV>
+		
+					<div class="form-row">
+						<div class="form-group col-md-4">
+							<label for="inputEmail" class="col-form-label"><b>Bairro</b></label>
+							<input type="text" class="form-control" id="inputEmail"
+								placeholder="digite seu Bairro">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputState"><b>Estado</b></label> <select
+								id="inputState" class="form-control">
+								<option selected>escolher...</option>
+								<option>...</option>
+							</select>
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputState"><b>Cidade</b></label> <select
+								id="inputState" class="form-control">
+								<option selected>escolher...</option>
+								<option>...</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-check">
+							<label class="form-check-label"> </label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label th:text="tipo"><b>Tipo Aluno</b></label>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="exampleRadios"
+								id="exampleRadios1" value="option1" checked> <label
+								class="form-check-label" for="exampleRadios1"><i>
+									Bolsista_Assistencia </i></label>
+						</div>
+		
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="exampleRadios"
+								id="exampleRadios1" value="option1" checked> <label
+								class="form-check-label" for="exampleRadios1"><i>
+									Bolsista_Extensao </i></label>
+						</div>
+		
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="exampleRadios"
+								id="exampleRadios1" value="option1" checked> <label
+								class="form-check-label" for="exampleRadios1"><i>
+									Bolsista_Pesquisa </i></label>
+						</div>
+		
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="exampleRadios"
+								id="exampleRadios1" value="option1" checked> <label
+								class="form-check-label" for="exampleRadios1"><i>
+									Sem_Bolsa </i></label>
+						</div>
+						<button type="submit" class="btn btn-success">
+							<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+							cadastrar
+						</button>
+						<button type="submit" class="btn btn-danger">
+							<i class="fa fa-times" aria-hidden="true"></i> Cancelar
+						</button>
+					</div>
+				</form>
+			</div>
+    </body>
+</html>

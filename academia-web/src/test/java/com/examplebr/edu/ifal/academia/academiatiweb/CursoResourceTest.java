@@ -43,7 +43,7 @@ public class CursoResourceTest {
 		c2.setNome("informatica");
 		c3.setNome("emfermagem");
 
-		repositorio.save(c1);
+		repositorio.save(c1);//
 
 		repositorio.save(c2);
 

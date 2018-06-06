@@ -12,13 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.examplebr.edu.ifal.academia.academiatiweb.modelo.Aluno;
 import repositories.AlunoRepository;
 
-<<<<<<< HEAD
 @Controller //Define que minha classe será um controller
 @RequestMapping("/aluno")
-=======
-@Controller
-@RequestMapping("aluno")
->>>>>>> 7d089b13ae2ba13756569ebbb8af6672fd2e21d8
 public class AlunoController {
 	
 	@Autowired
